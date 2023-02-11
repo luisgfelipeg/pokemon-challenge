@@ -23,7 +23,7 @@ html {
 
 @media (min-aspect-ratio: 16/9) {
   .back-video {
-    width: 100%;
+    width: 100vw;
     height: auto;
   }
 }
@@ -31,6 +31,6 @@ html {
 @media (max-aspect-ratio: 16/9) {
   .back-video {
     width: auto;
-    height: 100%;
+    height: vh%;
   }
 }
