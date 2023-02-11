@@ -12,9 +12,6 @@ export default {
 
 <template>
   <main>
-    <video autoplay loop muted plays-inline class="back-video">
-      <source src="../assets/background.mp4" type="video/mp4" />
-    </video>
     <PokemonDiscovery />
     <PokemonDetails />
   </main>
@@ -27,5 +24,9 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('../assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 </style>
