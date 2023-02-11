@@ -12,6 +12,9 @@ export default {
 
 <template>
   <main>
+    <video autoplay loop muted plays-inline class="back-video">
+      <source src="../assets/background.mp4" type="video/mp4" />
+    </video>
     <PokemonDiscovery />
     <PokemonDetails />
   </main>
