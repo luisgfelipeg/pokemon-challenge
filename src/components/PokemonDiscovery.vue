@@ -81,6 +81,7 @@ export default {
         evolutionTwo,
         evolutionThree
       );
+      this.$router.push(`/pokemon/${name}`);
 
       this.findPokemon = false;
     },

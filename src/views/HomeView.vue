@@ -1,11 +1,9 @@
 <script>
 import PokemonDiscovery from '../components/PokemonDiscovery.vue';
-import PokemonDetails from '../components/PokemonDetails.vue';
 export default {
   name: 'HomeView',
   components: {
     PokemonDiscovery,
-    PokemonDetails,
   },
 };
 </script>
@@ -13,7 +11,6 @@ export default {
 <template>
   <main>
     <PokemonDiscovery />
-    <PokemonDetails />
   </main>
 </template>
 

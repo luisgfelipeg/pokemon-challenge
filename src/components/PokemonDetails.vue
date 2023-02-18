@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     resetApp() {
-      location.reload();
+      this.$router.push('/');
     },
   },
 };
