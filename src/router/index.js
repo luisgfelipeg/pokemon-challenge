@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import { usePokemonStore } from '../stores/PokemonStore';
 import HomeView from '../views/HomeView.vue';
 import PokemonView from '../views/PokemonView.vue';
 

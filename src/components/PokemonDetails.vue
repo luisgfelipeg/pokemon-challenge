@@ -1,12 +1,13 @@
 <script>
 import { usePokemonStore } from '../stores/PokemonStore';
-
 export default {
   name: 'PokemonDetails',
-  computed: {
-    pokemonStore() {
-      return usePokemonStore();
-    },
+  data() {
+    return {
+      pokemonStore: usePokemonStore(),
+    };
+  },
+  methods: {
     evolutions() {
       return [
         this.pokemonStore.evolutionOne,
@@ -14,10 +15,9 @@ export default {
         this.pokemonStore.evolutionThree,
       ];
     },
-  },
-  methods: {
     resetApp() {
       this.$router.push('/');
+      this.pokemonStore.$reset();
     },
   },
 };
