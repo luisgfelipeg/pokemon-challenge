@@ -9,12 +9,11 @@ export default {
     return {
       pokemon: '',
       notFound: false,
+      pokemonStore: usePokemonStore(),
     };
   },
   methods: {
     async getPokemon() {
-      const pokemonStore = usePokemonStore();
-
       const name = await (
         await Api.get(`pokemon/${this.pokemon.toLowerCase()}`).catch(
           (err) => (this.notFound = true)
@@ -70,7 +69,7 @@ export default {
         return stat;
       });
 
-      pokemonStore.addPokemon(
+      this.pokemonStore.addPokemon(
         name,
         species,
         selfie,
@@ -81,17 +80,6 @@ export default {
         evolutionThree
       );
       this.$router.push(`/pokemon/${name}`);
-
-      console.log(
-        name,
-        species,
-        selfie,
-        type,
-        stats,
-        evolutionOne,
-        evolutionTwo,
-        evolutionThree
-      );
     },
   },
 };
