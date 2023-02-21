@@ -41,7 +41,11 @@ html {
   background-color: #ffff00;
 }
 .flying {
-  background-color: white;
+  background-color: #d1d5db;
+}
+.ice {
+  background-color: #1d4ed8;
+  color: white;
 }
 .normal {
   background-color: #9ca3af;
