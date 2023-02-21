@@ -130,9 +130,9 @@ export default {
 .search__input {
   font-family: inherit;
   font-size: inherit;
-  background-color: #f4f2f2;
+  background-color: #00000094;
   border: none;
-  color: #646464;
+  color: #ffffff;
   padding: 0.7rem 1rem;
   border-radius: 30px;
   width: 12em;
@@ -147,24 +147,17 @@ export default {
 
 .search__input:focus {
   outline: none;
-  background-color: #f0eeee;
 }
 
 .search__input::-webkit-input-placeholder {
   font-weight: 100;
   color: #ccc;
 }
-
-.search__input:focus + .search__button {
-  background-color: #f0eeee;
-}
-
 .search__button {
   border: none;
-  background-color: #f4f2f2;
+  background-color: #00000000;
   margin-top: 0.1em;
 }
-
 .search__button:hover {
   cursor: pointer;
 }
