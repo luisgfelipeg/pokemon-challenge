@@ -10,7 +10,6 @@ export default {
   data() {
     return {
       pokemon: '',
-      notFound: false,
       pokemonStore: usePokemonStore(),
     };
   },
@@ -91,9 +90,6 @@ export default {
 
 <template>
   <div class="firstDiv">
-    <strong v-if="notFound"
-      >Pokémon nao encontrado, digite um pokémon valido!</strong
-    >
     <form v-on:submit.prevent="getPokemon">
       <input
         type="text"
