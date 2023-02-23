@@ -2,6 +2,8 @@
 import axios from 'axios';
 import { Api } from '../services/api/axios-config';
 import { usePokemonStore } from '../stores/PokemonStore';
+import { toast } from 'vue3-toastify';
+import 'vue3-toastify/dist/index.css';
 
 export default {
   name: 'PokemonDiscovery',
@@ -15,9 +17,11 @@ export default {
   methods: {
     async getPokemon() {
       const name = await (
-        await Api.get(`pokemon/${this.pokemon.toLowerCase()}`).catch(
-          (err) => (this.notFound = true)
-        )
+        await Api.get(`pokemon/${this.pokemon.toLowerCase()}`).catch((err) => {
+          toast.error(
+            'O Pokémon que você digitou não foi encontrado. Certifique-se de digitar o nome de um Pokémon existente!'
+          );
+        })
       ).data.name;
 
       const species = await (
